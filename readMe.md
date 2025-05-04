@@ -254,3 +254,41 @@ curl -X POST http://localhost:8000/api/token/blacklist/ \
   -d '{"refresh":""}'
 ```
 
+7. Create a post:
+
+```bash
+curl -X POST http://localhost:8000/api/posts/ \
+  -H "Authorization: Bearer " \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Test Post","content":"This is a test post"}'
+```
+
+8. Get all posts:
+
+```bash
+curl -X GET http://localhost:8000/api/posts/ \
+  -H "Authorization: Bearer "
+```
+
+9. Delete a post:
+
+```bash
+curl -X DELETE http://localhost:8000/api/posts/1/ \
+  -H "Authorization: Bearer "
+```
+
+10. Update a post:
+
+```bash
+curl -X PUT http://localhost:8000/api/posts/1/ \
+  -H "Authorization: Bearer " \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Updated Post","content":"This is an updated post"}'
+```
+
+11. Get a specific post:
+    
+```bash
+curl -X GET http://localhost:8000/api/posts/1/ \
+  -H "Authorization: Bearer "
+```
